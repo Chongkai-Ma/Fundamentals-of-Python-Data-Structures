@@ -55,8 +55,49 @@ Python does not have internal function to finish the stack. Thus, we can use arr
          s.pop()                   a                    b              return the top element and delete it
          s.pop()                                        a              return the top element and delete it
          s.isEmpty()                                   True            Now it is empty stack
-         s.peek()                                      KeyError        call a empty stack is a error
-         s.pop()                                       keyError        delete a empty stack is a error
+         s.peek()                                      KeyError        call a empty stack is an error
+         s.pop()                                       keyError        delete a empty stack is an error
          s.push(d)                 d                                   Now d is the top element
 
+
+**QUEUE**
+
+Python does not have internal function to finish the queue. Thus, we can use array (list) to emulate the queue to finish the queue's functions. The queue is **First-in First-out**. There are some operations of queue.
+
+             Operation           Status              Return               comments
+         q = <Queue Type>()                                            Start a queue, empoty queue
+         q.add(a)                  a                                   The queue involve first element "a"
+         q.add(b)                  a b                                 "a" is the first element, "b" is last element
+         q.add(c)                  a b c                               "c" is the first element
+         q.isEmpty                 a b c               False           The queue is not empty
+         len(q)                    a b c                 3             The queue include 3 elements
+         q.peek()                  a b c                 a             return the first element but not to delete it
+         q.pop()                   b c                   a             return the first element and delete it
+         q.pop()                   c                     b             returm the first element and delete it
+         q.pop()                                         c             return the first element and delete it
+         q.isEmpty()                                   True            Now the queue is empty
+         q.peek()                                      error           call a empty queue is an error
+         q.pop()                                       error           delete a empty queue is an error
+         q.add(d)                  d                                   "d" is the first element is the queue
+
+
+**LIST**
+
+List is the last liner set. It has more functions than stack and queue have. It can add elements at anywhere, any time. There are two types of list options. The first one is base on index operation. The second one is base on content. 
+
+There are some operations based on index.
+
+               Method                                              Result
+         L.insert(i, item)                                   Add a item at index i
+         L.pop(i = None)                                     return and delete index i 
+         L.[i]                                               Return the item at index i
+         L.[i] = item                                        Use item instead of item i
+        
+
+There are some operations based on item.
+
+               Method                                              Result
+         L.append(item)                                      Add a item as end of list
+         L.remove(item)                                      del item in the list
+         L.index(item)                                       return the index of the item. 
 
